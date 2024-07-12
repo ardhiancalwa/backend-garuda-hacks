@@ -2,12 +2,11 @@
 
 const firebase = require('../db');
 const User = require('../models/user');
-const firestore = firebase.firestore();
 
 // GET ALL
 const getAllUsers = async (req, res, next) => {
     try {
-      const users = await firestore.collection('users');
+      const users = await firebase.collection('users');
       const data = await users.get();
       const usersArray = [];
       if (data.empty) {
@@ -35,7 +34,7 @@ const getAllUsers = async (req, res, next) => {
 const getUserById = async (req, res, next) => {
     try {
         const idUser = req.params.idUser;
-        const user = await firestore.collection('users').doc(idUser);
+        const user = await firebase.collection('users').doc(idUser);
         const data = await user.get();
         if (!data.exists) {
             res.status(404).send('User with the given ID not found');
@@ -51,7 +50,7 @@ const getUserById = async (req, res, next) => {
 const addNewUser = async (req, res) => {
     try {
       const data = req.body;
-      await firestore.collection('users').doc().set(data);
+      await firebase.collection('users').doc().set(data);
       res.send('Record saved successfully')
     } catch (error) {
       res.status(404).send(error.message);
@@ -62,7 +61,7 @@ const addNewUser = async (req, res) => {
 const editUser = async (req, res, next) => {
     try {
         const iduser = req.params.idUser;
-        const user = await firestore.collection('users').doc(iduser);
+        const user = await firebase.collection('users').doc(iduser);
         const data = req.body
         const users = await user.get();
         if (!users.exists) {
@@ -79,7 +78,7 @@ const editUser = async (req, res, next) => {
 const deleteUser = async (req, res, next) => {
     try {
         const idUser = req.params.idUser;
-        const user = await firestore.collection('users').doc(idUser);
+        const user = await firebase.collection('users').doc(idUser);
         const users = await user.get();
         if (!users.exists) {
             res.status(404).send('No user found');

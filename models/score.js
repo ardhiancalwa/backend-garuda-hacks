@@ -1,6 +1,11 @@
 class Score {
-    constructor() {
-        
+    constructor(idProject, idMentor, idUser, score, feedbackCV, feedbackProject) {
+        this.idProject = idProject,
+        this.idMentor = idMentor,
+        this.idUser = idUser,
+        this.score = score,
+        this.feedbackCV = feedbackCV,
+        this.feedbackProject = feedbackProject
     }
 }
 

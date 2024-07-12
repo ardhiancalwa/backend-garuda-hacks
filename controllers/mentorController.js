@@ -2,12 +2,11 @@
 
 const firebase = require('../db');
 const Mentor = require('../models/mentor');
-const firestore = firebase.firestore();
 
 // GET ALL MENTOR
 const getAllMentor = async (req, res, next) => {
     try {
-        const mentors = await firestore.collection('mentors');
+        const mentors = await firebase.collection('mentors');
         const data = await mentors.get();
         const mentorArray = [];
         if (data.empty) {
@@ -36,7 +35,7 @@ const getAllMentor = async (req, res, next) => {
 const getMentorById = async (req, res, next) => {
     try {
         const idMentor = req.params.idMentor;
-        const mentor = await firestore.collection('mentors').doc(idMentor);
+        const mentor = await firebase.collection('mentors').doc(idMentor);
         const data = await mentor.get();
         if (!data.exists) {
             res.status(404).send('Mentor with the given ID not found');
@@ -52,7 +51,7 @@ const getMentorById = async (req, res, next) => {
 const addNewMentor =  async (req, res) => {
     try {
         const data = req.body;
-        await firestore.collection('mentors').doc().set(data);
+        await firebase.collection('mentors').doc().set(data);
         res.send('Record data saved successfully');
     } catch (error) {
         res.status(404).send(error.message);
@@ -63,7 +62,7 @@ const addNewMentor =  async (req, res) => {
 const editMentor = async (req, res, next) => {
     try {
         const idmentor =  req.params.idMentor;
-        const mentor = await firestore.collection('mentors').doc(idmentor);
+        const mentor = await firebase.collection('mentors').doc(idmentor);
         const data = req.body;
         const mentors = await mentor.get();
         if (!mentors.exists) {
@@ -80,7 +79,7 @@ const editMentor = async (req, res, next) => {
 const deleteMentor = async (req, res) => {
     try {
         const idmentor = req.params.idMentor;
-        const mentor = await firestore.collection('mentors').doc(idmentor);
+        const mentor = await firebase.collection('mentors').doc(idmentor);
         const mentors = await mentor.get();
         if (!mentors.exists) {
             res.status(404).send('No mentor found');
