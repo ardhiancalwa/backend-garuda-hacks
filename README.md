@@ -3,11 +3,11 @@
 This project describes the backend documentation of the improved application according to the business processes we are developing!
 
 ## List of Content
-- [Tentang Proyek](#tentang-proyek)
-- [Fitur](#fitur)
-- [Instalasi](#instalasi)
+- [About the Project](#tentang-proyek)
+- [Feauture](#fitur)
+- [Installation](#instalasi)
   
-## Tentang Proyek - **About the Project**
+## **About the Project**
 ## IMPROOVE
 
 [![DEMO APPS IMPROOVE](http://img.youtube.com/vi/NkSRFEQb94A/0.jpg)](http://www.youtube.com/watch?v=NkSRFEQb94A)
@@ -20,13 +20,13 @@ We created a digital platform in the form of a mobile application that we named 
 
 "Increase Capability, Get Job Easily"
 
-## Fitur - **Feauture**
+## **Feauture**
 
 - Apply Project
 - Check Cover Letter by AI
 - Check Your Simulated Interview
 
-## Instalasi - **Installation**
+## **Installation**
 
 Steps to install and run this project locally.
 
