@@ -1,6 +1,6 @@
 # DOCUMENTATION BACKEND IMPROOVE
 
-Deskripsi lebih mendetail tentang proyek Anda, misalnya latar belakang, tujuan, dan manfaat dari proyek ini.
+This project describes the backend documentation of the improved application according to the business processes we are developing!
 
 ## List of Content
 - [Tentang Proyek](#tentang-proyek)
@@ -10,9 +10,7 @@ Deskripsi lebih mendetail tentang proyek Anda, misalnya latar belakang, tujuan, 
 ## Tentang Proyek - **About the Project**
 ## IMPROOVE
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=NkSRFEQb94A
-" target="_blank"><img src="http://img.youtube.com/vi/NkSRFEQb94A/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+[![DEMO APPS IMPROOVE](http://img.youtube.com/vi/NkSRFEQb94A/0.jpg)](http://www.youtube.com/watch?v=NkSRFEQb94A)
 
 This idea was made from our anxiety about the unemployment rate in Indonesia which reached 5.45%, making Indonesia the country with the second highest average unemployment in ASEAN. Challenges in the labor market can be seen when BPS reports that in 2023 there are 1,819,830 million people who are still looking for work. However, only a few of them manage to get a job that meets their expectations. This is an important indicator in the context of achieving sustainable development target (SDGs) number 8, which is related to decent work and economic growth.
 
